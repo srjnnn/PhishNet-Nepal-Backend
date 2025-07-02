@@ -1,4 +1,4 @@
-import config from '../configs/index.js';
+import config from '../config/index.js';
 import { createClient } from '@supabase/supabase-js';
 
 class SupaClient {
