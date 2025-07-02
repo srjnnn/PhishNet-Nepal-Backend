@@ -1,10 +1,12 @@
 {
   "name": "phishnet",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/index.js",
+    "d": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/srjnnn/PhishNet-Nepal-Backend/issues"
   },
@@ -21,7 +22,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.50.2",
     "dotenv": "^17.0.1",
-    "expres": "^0.0.5",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
   }
 }
