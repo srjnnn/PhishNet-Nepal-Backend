@@ -2,7 +2,6 @@ import 'dotenv/config'
 import config from './config/index.js'
 import Server from './server/index.js'
 import supaClient from './supabase/index.js'
-import msg from './server/services/message/index.js';
 
 const port = config.port;
 const serverHost = config.serverHost;
