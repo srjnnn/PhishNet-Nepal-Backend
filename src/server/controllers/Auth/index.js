@@ -29,13 +29,17 @@ if (!session || !user) {
 
 // Everything is fine – send success response
 console.log("Authenticated successfully:", user.email);
-
+res.cookie("refreshToken",session.refresh_token,{
+  httpOnly : false, //can be accessed using js for now
+  secure : false, //not on the https production
+  maxAge:30*24*60*60*1000 //30 days
+})
 return res.status(200).json({
   message: "Login successful",
   accessToken: session.access_token,
-  refreshToken: session.refresh_token,
   user,
 });
+
 
 
     }catch(err){
