@@ -1,4 +1,3 @@
-
 import supabase from "../../../supabase/index.js";
 
 export const deleteUsers = async (req, res) => {
