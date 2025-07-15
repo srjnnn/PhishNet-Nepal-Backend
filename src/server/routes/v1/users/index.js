@@ -1,4 +1,6 @@
+import { addUsers } from "../../../controllers/users/addUsers.js";
 import { getUsers } from "../../../controllers/users/getUsers.js";
+
 import { Router } from "express";
 
 class userRoutes{
@@ -8,6 +10,7 @@ constructor(){
 }
 setupRoutes(){
     this.router.route("/").get(getUsers);
+    this.router.route("/").post(addUsers)
 }
 }
 
