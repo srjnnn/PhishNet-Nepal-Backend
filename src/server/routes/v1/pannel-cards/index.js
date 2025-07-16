@@ -1,4 +1,4 @@
-
+import { addPannel } from "../../../controllers/pannel-cards/addPannel.js";
 import { getPannel } from "../../../controllers/pannel-cards/index.js";
 import { Router } from "express";
 
@@ -9,6 +9,7 @@ class pannelCardsRoutes {
   }
   setupRoutes() {
     this.router.route("/").get(getPannel);
+    this.router.route("/").post(addPannel);
   }
 }
 
