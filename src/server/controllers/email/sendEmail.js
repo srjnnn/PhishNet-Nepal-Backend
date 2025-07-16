@@ -20,7 +20,7 @@ console.log("received")
       from: process.env.EMAIL_USER,
       to: emails.join(","),
       subject,
-      text: body,
+      html: body,
     };
 
     const info = await transporter.sendMail(mailOptions);
