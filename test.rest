@@ -1,7 +1,1 @@
-POST https://phishnet-nepal-backend.onrender.com/api/v1/login
-Content-Type: application/json
-
-{
-  "email": "mrsrjn224@gmail.com",
-  "password": "blablabla"
-}
+GET  http://localhost:5000/api/v1/stats

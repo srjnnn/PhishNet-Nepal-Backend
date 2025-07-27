@@ -4,6 +4,7 @@ import userRoutes from './users/index.js';
 import logsRoutes from './attempts-logs/index.js';
 import pannelCardsRoutes from './pannel-cards/index.js';
 import emailRoutes from './email/index.js';
+import statsDataRoutes from './statsData/index.js';
 
 export default class V1Route {
     constructor() {
@@ -13,6 +14,7 @@ export default class V1Route {
         this.logsRoutes = new logsRoutes();
         this.pannelCardsRoutes = new pannelCardsRoutes();
         this.emailRoutes = new emailRoutes();
+        this.statsDataRoutes = new statsDataRoutes();
         
         this.setupRoutes();
     }
@@ -22,5 +24,6 @@ export default class V1Route {
         this.router.use("/logs",this.logsRoutes.router);
         this.router.use("/blogs", this.pannelCardsRoutes.router);
         this.router.use("/email",this.emailRoutes.router);
+        this.router.use("/stats",this.statsDataRoutes.router);
     }
 }
